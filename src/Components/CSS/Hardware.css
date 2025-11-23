@@ -1,0 +1,234 @@
+.hardware-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.hardware-wrapper h2 {
+  color: #374151;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  position: relative;
+}
+
+.section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section-header,
+.addon-row,
+.section-headers {
+  display: grid;
+  grid-template-columns: 30px minmax(120px, 1fr) minmax(100px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) minmax(80px, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section-header input[type="checkbox"],
+.addon-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.section-header select,
+.input-one,
+.input-two,
+.custom-addon-name,
+.addon-row input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.section-header select:disabled,
+.custom-addon-name:disabled,
+.section-header input[type="number"]:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.cost-display,
+.addon-row span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  text-align: right;
+  margin: 0;
+}
+
+.input-label,
+.input-rate,
+.input-cost {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.addon-row label {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.addon-row .cost-cell {
+  margin-right: 85px;
+}
+
+.custom-addon {
+  padding: 12px 20px 12px 70px;
+  color: #3b82f6;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  background: #ffffff;
+  border-top: 1px solid #f3f4f6;
+}
+
+.custom-addon:hover {
+  background: #f8fafc;
+  color: #1d4ed8;
+}
+
+.custom-addon .cost-cell {
+  margin-right: 5px;
+}
+
+/* Edit button styles */
+.addon-row button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid #3b82f6;
+  background-color: #e0f2fe;
+  color: #1d4ed8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.addon-row button:hover {
+  background-color: #bae6fd;
+}
+
+/* Medium screens (between 1024px - 1199px) */
+@media (max-width: 1199px) {
+  .section-header,
+  .addon-row,
+  .section-headers {
+    grid-template-columns: 30px 180px 140px 100px 80px 80px auto;
+    gap: 10px;
+  }
+}
+
+/* Tablets (768px – 1023px) */
+@media (max-width: 1023px) {
+  .section-header,
+  .addon-row,
+  .section-headers {
+    grid-template-columns: 30px 1fr 1fr;
+    gap: 10px;
+  }
+
+  .cost-display,
+  .addon-row span {
+    text-align: left;
+  }
+
+  .hardware-wrapper h2 {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .addon-row button {
+    align-self: flex-start;
+  }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+  .section-header,
+  .addon-row,
+  .section-headers {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .hardware-wrapper h2 {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .cost-display,
+  .addon-row span {
+    text-align: left;
+    margin: 0;
+  }
+
+  .addon-row label {
+    padding-left: 0;
+    font-size: 13px;
+  }
+
+  .custom-addon {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .pdf-button {
+    width: 100%;
+  }
+}
+
+/* Extra small (below 480px) */
+@media (max-width: 479px) {
+  .hardware-wrapper h2 {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .custom-addon {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .addon-row label {
+    font-size: 12px;
+  }
+}

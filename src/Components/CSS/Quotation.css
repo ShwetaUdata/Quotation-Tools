@@ -1,0 +1,46 @@
+/* src/Components/CSS/Quotation.css */
+
+div.quotation-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #1e3a8a; /* dark blue */
+  margin-bottom: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+  align-items: center; 
+}
+
+li {
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #78350f; /* dark orange/brown */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 500px; /* fixed width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
